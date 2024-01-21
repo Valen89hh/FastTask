@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/day_bakground_selected"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@color/selected_day_of_month_state"
+        android:id="@+id/tvNumberDay"
+        android:layout_width="wrap_content"
+        style="@style/h2_text"
+        android:layout_height="wrap_content"
+        tools:text="12"/>
+
+    <TextView
+        android:textColor="@color/selected_day_of_month_state"
+
+        android:id="@+id/tvNameDay"
+        style="@style/h2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Tue"/>
+
+</LinearLayout>

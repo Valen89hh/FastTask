@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_task_graph"
+    app:startDestination="@id/mainTaskFragment">
+
+    <fragment
+        android:id="@+id/mainTaskFragment"
+        android:name="com.valendev.fasttask.ui.hometask.maintask.MainTaskFragment"
+        android:label="fragment_main_task"
+        tools:layout="@layout/fragment_main_task" >
+        <action
+            android:id="@+id/action_mainTaskFragment_to_calendaryFragment"
+            app:destination="@id/calendaryFragment" />
+        <action
+            android:id="@+id/action_mainTaskFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendaryFragment"
+        android:name="com.valendev.fasttask.ui.hometask.calendary.CalendaryFragment"
+        android:label="fragment_calendary"
+        tools:layout="@layout/fragment_calendary" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.valendev.fasttask.ui.hometask.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>

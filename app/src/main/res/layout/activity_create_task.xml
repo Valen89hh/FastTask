@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.createtask.CreateTaskActivity">
+
+    <ImageView
+        android:id="@+id/btnBackNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_24"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/mt_bar"/>
+
+    <TextView
+        android:id="@+id/create_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/mt_bar"
+        android:text="@string/create_new_task"
+        style="@style/h2_text"/>
+
+    <LinearLayout
+        android:id="@+id/content_inputs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/content_create_task"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+        app:layout_constraintTop_toBottomOf="@id/create_new_task">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3_text"
+            android:text="@string/title"
+            />
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter title task"
+            style="@style/input_task"
+            android:layout_marginBottom="20dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3_text"
+            android:text="@string/description"
+            />
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter description task"
+            style="@style/input_task"
+            android:layout_marginBottom="20dp"
+            android:maxLines="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3_text"
+            android:text="@string/date"
+            />
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:inputType="date"
+            android:layout_height="wrap_content"
+            android:hint="Enter date task"
+            android:focusable="false"
+            android:clickable="true"
+            style="@style/input_task"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_create_task"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/card_list_task_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_inputs"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content_start_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start_create"
+            app:layout_constraintEnd_toStartOf="@id/content_end_time"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3_text"
+                android:text="@string/start_time"/>
+
+            <EditText
+                android:id="@+id/etStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                style="@style/input_task"
+                android:clickable="true"
+                android:focusable="false"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_end_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/content_start_time"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end_create"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3_text"
+                android:text="@string/end_time"/>
+
+            <EditText
+                android:id="@+id/etEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                style="@style/input_task"
+                android:clickable="true"
+                android:focusable="false"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            style="@style/h3_text"
+            android:text="@string/category_create"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start_create"
+            app:layout_constraintTop_toBottomOf="@id/content_start_time"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategoriesTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_category"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start_create"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end_create"
+            app:layout_constraintBottom_toTopOf="@id/btnAddTask"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="@string/add_task"
+            android:id="@+id/btnAddTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            style="@style/button_secondary"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start_create"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end_create"
+            app:layout_constraintTop_toBottomOf="@id/rvCategoriesTag"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_start_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_end_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

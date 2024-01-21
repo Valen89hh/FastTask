@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="circle_view_welcome">550dp</dimen>
+    <dimen name="circle_view_welcome_mt">-50dp</dimen>
+    <dimen name="circle_view_welcome_ms">-170dp</dimen>
+    <dimen name="circle_image_width_welcome">400dp</dimen>
+    <dimen name="circle_image_height_welcome">500dp</dimen>
+    <dimen name="circle_image_rotation_welcome">-4</dimen>
+    <dimen name="circle_image_welcome_tx">100dp</dimen>
+    <dimen name="circle_image_welcome_ts">150dp</dimen>
+    <dimen name="input_text">10dp</dimen>
+</resources>

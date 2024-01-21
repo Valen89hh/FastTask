@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+<!--    Setting colors-->
+    <color name="accent_yellow_suave">#FFFCE3</color>
+    <color name="accent_yellow">#FFC600</color>
+    <color name="accent_yellow_light">#FFE600</color>
+    <color name="accent_yellow_shadow">#FFF9C6</color>
+
+    <color name="accent_green_suave">#E9FFE3</color>
+    <color name="accent_green">#52D22E</color>
+    <color name="accent_green_shadow">#C6FFDD</color>
+    <color name="accent_green_checkbox">#E6F5E1</color>
+
+    <color name="accent_purple_suave">#E3E6FF</color>
+    <color name="accent_purple">#6270F0</color>
+    <color name="accent_purple_shadow">#C7C6FF</color>
+
+    <color name="accent_blue_suave">#C3C8FF</color>
+
+    <color name="accent_orange_suave">#FFEAC3</color>
+    <color name="accent_orange_shadow">#FFD4A3</color>
+    <color name="accent_orange">#FFBD82</color>
+
+
+
+    <color name="accent_marron_suave">#D2B48C</color>
+
+    <color name="accent_sky_suave">#87CEEB</color>
+
+
+
+
+
+    <color name="primary">#242424</color>
+    <color name="primary_transparent">#4D242424</color>
+    <color name="primary_variant">#BCBCBC</color>
+    <color name="primary_variant_dark">#606060</color>
+    <color name="primary_variant_light">#757575</color>
+
+
+    <color name="background_1">#FAFAFA</color>
+    <color name="background_4">#99F4F4F4</color>
+    <color name="background_2">#EAEAEA</color>
+    <color name="background_3">#D9D9D9</color>
+
+
+
+</resources>
