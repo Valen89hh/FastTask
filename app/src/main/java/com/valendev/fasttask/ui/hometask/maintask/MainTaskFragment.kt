@@ -203,13 +203,10 @@ class MainTaskFragment : Fragment() {
                     if (user != null){
                         binding.apply {
                             tvSaludo.text = "Hello ${user.name}!"
-
-
                         }
                         try {
                             Log.d("EGGSDFGHSDF", user.image.toString())
                             if(user.image == null || user.image!!.isEmpty()) throw Exception("Not found image")
-                            Log.d("EGGSDFGHSDF", "Despues --")
 
                             val bitmap = BitmapFactory.decodeFile(user.image)
                             binding.civUser.setImageBitmap(bitmap)
