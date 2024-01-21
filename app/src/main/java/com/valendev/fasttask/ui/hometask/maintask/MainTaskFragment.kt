@@ -122,7 +122,7 @@ class MainTaskFragment : Fragment() {
         viewModel.updateListDataTask(TaskStatus.NEW)
         viewModel.updateCategories()
 
-
+        //: )
 
         initUI()
 
